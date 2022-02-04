@@ -1,0 +1,4 @@
+local result
+
+result=$(curl -s "https://freecurrencyapi.net/api/v2/latest?apikey=408e4060-695f-11ec-93af-9df673e986db&base_currency=$1" | jp data.$2)
+echo "$result*$3" | bc 
